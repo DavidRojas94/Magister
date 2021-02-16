@@ -1,13 +1,55 @@
 <app-magisterbar [etapa]=2 ></app-magisterbar>
 <div class="container-right">
-  <div class="form-container">
-    <h1>Contact us</h1>
-    <form [formGroup] ="contactForm" (ngSubmit)="onSaveForm()" (ngSubmit)="mostrarInformacion()">
-      <input type="text" formControlName="name" placeholder="Ej: David Rojas Caballero">
-      <input type="text" formControlName="dni" placeholder="Ej: Y56748659P">
-      <input type="text" formControlName="movil" placeholder="Ej: 654789735">
-      <input type="email" formControlName="email" placeholder="Ej: magis@gmail.com">
-      <button type="submit" class="btn-send" [disabled]=!contactForm.valid>Continuar</button>
-    </form>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><h1>Elige el horario y modalidad que más te acomode</h1></div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="row" id="row1">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <h5>Modalidad</h5>
+        <span>(Selecciona una opción)</span>
+      </div>
+      <div class="col-md-7"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <button class="btn" *ngFor="let item of modalidad.data">{{item.modalidad}}</button>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-4"></div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="row" id="row1">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <h5>Horario</h5>
+        <span>(Selecciona una opcion)</span>
+        <select id="rama" >
+          <option value="">1 Clase al mes Prácticos y Programacion sábados por la mañana. Grupo1 de 10 a 14 horas.</option>
+          <option value="horarios"*ngFor="let item of horarios.datos">{{item.horarios}}</option>
+        </select>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-3"></div>
+      <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4" id="btndiv">
+        <button class="btn2" (click)="avanzar()">Siguiente</button>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4" id="btndiv">
+        <a [routerLink]="['/formulario1']">Volver atras</a>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
   </div>
 </div>

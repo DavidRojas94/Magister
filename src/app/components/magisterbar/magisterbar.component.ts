@@ -23,4 +23,5 @@ export class MagisterbarComponent implements OnInit {
       return 'seleccionado';
     }
   }
+
 }

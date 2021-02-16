@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore,AngularFirestoreCollection,} from '@angular/fire/firestore';
+import {
+  AngularFirestore,
+  AngularFirestoreCollection,
+} from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Information } from '../models/information.interface';
 import { map } from 'rxjs/operators';
@@ -10,28 +13,36 @@ type CollectionPredicate<T> = string | AngularFirestoreCollection;
 })
 export class DataDbService {
   private contactCollection: AngularFirestoreCollection<Information>;
-  //private todoCollectionName = 'todos';
 
   constructor(private afs: AngularFirestore) {
     this.contactCollection = afs.collection<Information>('datosPersonales');
-
   }
   col<T>(ref: CollectionPredicate<T>, queryFn?): AngularFirestoreCollection {
     return typeof ref === 'string' ? this.afs.collection(ref, queryFn) : ref;
   }
-  /*getTodos(): Observable<firebase.default.firestore.QuerySnapshot> {
-    return this.afs.collection<Information>(this.todoCollectionName).get();
-   }*/
 
   saveInformation(newContact: any): void {
     this.contactCollection.add(newContact);
   }
-  getInfo(){
-    return this.afs.collection("datosPersonales").snapshotChanges();
+  getInfo() {
+    return this.afs.collection('datosPersonales').snapshotChanges();
   }
-  getInfo1(){
-    return this.afs.collection("modalidades").snapshotChanges();
+  getInfo1() {
+    return this.afs.collection('modalidades').snapshotChanges();
   }
+  getInfo2() {
+    return this.afs.collection('ramas').snapshotChanges();
+  }
+  getInfo3() {
+    return this.afs.collection('provincias').snapshotChanges();
+  }
+  getInfo4() {
+    return this.afs.collection('horarios').snapshotChanges();
+  }
+  getInfo5() {
+    return this.afs.collection('tarifas').snapshotChanges();
+  }
+
 
   mostrarInfo<T>(ref: CollectionPredicate<T>, queryFn?): Observable<any[]> {
     return this.col(ref, queryFn)
@@ -46,5 +57,4 @@ export class DataDbService {
         })
       );
   }
-
 }

@@ -1,40 +1,38 @@
- <!-- <div class="form-container">
-  <h1>Contact us</h1>
-  <form [formGroup]>
-    <input type="text" formControlName="name" placeholder="Ej: David Rojas Caballero">
-    <input type="text" formControlName="dni" placeholder="Ej: Y56748659P">
-    <input type="text" formControlName="movil" placeholder="Ej: 654789735">
-    <input type="email" formControlName="email" placeholder="Ej: magis@gmail.com">
-    <button type="submit" class="btn-send">Continuar</button>
-  </form>
+<app-magisterbar [etapa]=3 ></app-magisterbar>
+<div class="container-right">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><h1>Elige el horario y modalidad que más te acomode</h1></div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="row" id="row1">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <h5>Tarifas</h5>
+        <span>(Selecciona una opción)</span>
+      </div>
+      <div class="col-md-7"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <button class="btn" *ngFor="let item of tarifas.data">{{item.tarifa}}</button>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-4"></div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4" id="btndiv">
+        <button class="btn2" (click)="avanzar()">Siguiente</button>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+  <div class="btndiv2">
+    <a [routerLink]="['/formulario2']">Volver atras</a>
+  </div>
 </div>
-<div style="text-align: center;">
-  <h2>Sistema de estudiantes</h2>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Opciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of collection.data">
-        <td>{{item.name}}</td>
-        <td>{{item.dni}}</td>
-        <td>{{item.movil}}</td>
-        <td>{{item.movil}}</td>
-      </tr>
-    </tbody>
-  </table> -->
-  <select id="cars" >
-    <option value="volvo" *ngFor="let item of collection.data">
-      {{item.modalidad}}
-
-    </option>
-
-
-  </select>
-
 

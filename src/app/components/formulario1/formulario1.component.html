@@ -1,5 +1,77 @@
-<app-magisterbar [etapa]=1 ></app-magisterbar>
-<!--<div class="container-right">
-  aaaaaaaaaaaaaa
-  <button (click)="avanzar()">Continuar</button>
-</div> -->
+<app-magisterbar [etapa]="1"></app-magisterbar>
+<div class="container-right">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><h1>¿En que te quieres especializar?</h1></div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="row" id="row1">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <h5>Rama</h5>
+        <span>(Selecciona una opcion)</span>
+        <select id="rama" >
+          <option value="">Ej:Maestros - Audicion y lenguaje</option>
+          <option value="rama"*ngFor="let item of collection.data">{{item.rama}}</option>
+        </select>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <h5>Provincia</h5>
+        <span>(Selecciona una opcion)</span>
+        <select id="rama" >
+          <option value="">Ej:Madrid </option>
+          <option value="provincia" *ngFor="let item of provincias.datos"> {{item.provincia}}</option>
+        </select>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+      <div class="row" id="row2">
+        <div class="col-md-1"></div>
+        <div class="col-md-11">
+          <h5>¿Has sido alumn@ de magister?</h5>
+          <span class="conditions">Consulta condiciones --></span>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-1">
+          <button class="btn">No</button>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1">
+          <button class="btn">Si</button>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
+          <button class="btn">Despues de 2017</button>
+        </div>
+      </div>
+      <div class="row" id="row2">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <h5>Entrega de material</h5>
+          <span class="conditions">Consulta condiciones --></span>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
+          <button class="btn1">Material mes a mes</button>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" id="btndiv">
+          <button class="btn2" (click)="avanzar()">Continuar</button>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+
+  </div>
+

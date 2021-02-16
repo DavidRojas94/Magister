@@ -2,27 +2,33 @@
 <p [ngClass] = "{'seleccionado': actual(1) }">magisterbar works! {{etapa}}</p>
 <p [ngClass] = "returnString(1)">magisterbar works! {{etapa}}</p>
 <p  *ngIf="etapa==1">11111</p>
-<p  *ngIf="etapa==2">22222</p
+<p  *ngIf="etapa==2">22222</p>-->
+
 <div class="container-left">
   <div class="imagen">
-    <img src="assets/img/casita3.png" />
+    <img src="assets/img/casita3.png">
   </div>
   <div class="cabecera">
     <h2>Magister</h2>
   </div>
-</div>>
-
-</div>-->
-<div class="wrapper">
-  <div class="color">
-    <i class="fas fa-circle"></i>
-  </div>
-  <ul class="StepProgress">
-    <li class="StepProgress-item is-done"><strong>¿En que te quieres especializar?</strong></li>
-    <li class="StepProgress-item is-done"><strong>Horario y modalidad</strong></li>
-    <li class="StepProgress-item current"><strong>Tarifa</strong></li>
-    <li class="StepProgress-item"><strong>Datos personales</strong></li>
-    <li class="StepProgress-item"><strong>Dirección</strong></li>
-    <li class="StepProgress-item"><strong>Forma de pago</strong></li>
-  </ul>
+</div>
+<div class="bar">
+<ul id="progress">
+  <li><div class="node blue" [ngClass] = "{'seleccionado': etapa ===1}"></div><p>¿En que te quieres especializar?</p></li>
+  <li><div class="divider grey"></div></li>
+  <li><div class="node blue" [ngClass] = "{'seleccionado': etapa ===2}"></div><p>Horario y Modalidad</p></li>
+  <li><div class="divider grey"></div></li>
+  <li><div class="node blue" [ngClass] = "{'seleccionado': etapa ===3}"></div><p>Tarifa</p></li>
+  <li><div class="divider grey" [ngClass] = "{'seleccionado': etapa ===4}"></div></li>
+  <li><div class="node blue" [ngClass] = "{'seleccionado': etapa ===5}"></div><p>Datos personales</p></li>
+  <li><div class="divider grey"></div></li>
+  <li><div class="node blue" [ngClass] = "{'seleccionado': etapa ===6}"></div><p>Dirección</p></li>
+  <li><div class="divider grey"></div></li>
+  <li><div class="node blue" [ngClass] = "{'seleccionado': etapa ===7}"></div><p>Forma de pago</p></li>
+</ul>
+<div>
+  <img *ngIf="etapa===1" class="figura" src="assets/img/imagen1.PNG">
+  <img *ngIf="etapa===2" class="figura" src="assets/img/imagen2.PNG">
+  <img *ngIf="etapa===3" class="figura" src="assets/img/imagen3.PNG">
+</div>
 </div>
