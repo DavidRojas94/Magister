@@ -1,4 +1,13 @@
 <app-magisterbar [etapa]=2 ></app-magisterbar>
 <div class="container-right">
-  aaaaaaaaaaaaaa
+  <div class="form-container">
+    <h1>Contact us</h1>
+    <form [formGroup] ="contactForm" (ngSubmit)="onSaveForm()" (ngSubmit)="mostrarInformacion()">
+      <input type="text" formControlName="name" placeholder="Ej: David Rojas Caballero">
+      <input type="text" formControlName="dni" placeholder="Ej: Y56748659P">
+      <input type="text" formControlName="movil" placeholder="Ej: 654789735">
+      <input type="email" formControlName="email" placeholder="Ej: magis@gmail.com">
+      <button type="submit" class="btn-send" [disabled]=!contactForm.valid>Continuar</button>
+    </form>
+  </div>
 </div>

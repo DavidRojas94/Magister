@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {DataDbService } from './services/data-db.service';
 
 //Rutas
 import { APP_ROUTING } from './app.routes';
@@ -37,7 +38,7 @@ import { Formulario3Component } from './components/formulario3/formulario3.compo
     ReactiveFormsModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [DataDbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,40 @@
-<p>formulario3 works!</p>
+ <!-- <div class="form-container">
+  <h1>Contact us</h1>
+  <form [formGroup]>
+    <input type="text" formControlName="name" placeholder="Ej: David Rojas Caballero">
+    <input type="text" formControlName="dni" placeholder="Ej: Y56748659P">
+    <input type="text" formControlName="movil" placeholder="Ej: 654789735">
+    <input type="email" formControlName="email" placeholder="Ej: magis@gmail.com">
+    <button type="submit" class="btn-send">Continuar</button>
+  </form>
+</div>
+<div style="text-align: center;">
+  <h2>Sistema de estudiantes</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of collection.data">
+        <td>{{item.name}}</td>
+        <td>{{item.dni}}</td>
+        <td>{{item.movil}}</td>
+        <td>{{item.movil}}</td>
+      </tr>
+    </tbody>
+  </table> -->
+  <select id="cars" >
+    <option value="volvo" *ngFor="let item of collection.data">
+      {{item.modalidad}}
+
+    </option>
+
+
+  </select>
+
+
