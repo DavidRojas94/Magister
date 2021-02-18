@@ -18,6 +18,9 @@ import { Formulario1Component } from './components/formulario1/formulario1.compo
 import { MagisterbarComponent } from './components/magisterbar/magisterbar.component';
 import { Formulario2Component } from './components/formulario2/formulario2.component';
 import { Formulario3Component } from './components/formulario3/formulario3.component';
+import { Formulario4Component } from './components/formulario4/formulario4.component';
+import { Formulario5Component } from './components/formulario5/formulario5.component';
+import { Formulario6Component } from './components/formulario6/formulario6.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { Formulario3Component } from './components/formulario3/formulario3.compo
     MagisterbarComponent,
     Formulario2Component,
     Formulario3Component,
+    Formulario4Component,
+    Formulario5Component,
+    Formulario6Component,
 
   ],
   imports: [

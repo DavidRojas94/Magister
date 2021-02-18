@@ -1,4 +1,4 @@
-<app-magisterbar [etapa]="1"></app-magisterbar>
+<app-magisterbar [etapa]=6></app-magisterbar>
 <div class="container-right">
   <div class="container-fluid">
     <div class="row">
@@ -9,30 +9,19 @@
     <div class="row" id="row1">
       <div class="col-md-1"></div>
       <div class="col-md-4">
-        <h5>Rama</h5>
-        <span>(Selecciona una opcion)</span>
-        <select id="rama" >
-          <option value="">Ej:Maestros - Audicion y lenguaje</option>
-          <option value="rama"*ngFor="let item of collection.data">{{item.rama}}</option>
-        </select>
+        <h5>¿Como prefieres abonar tu primer pago?</h5>
+        <button id="rama">Tarjeta de crédito/débito (recomendado)</button>
       </div>
       <div class="col-md-2"></div>
       <div class="col-md-3">
-        <h5>Provincia</h5>
-        <span>(Selecciona una opcion)</span>
-        <select id="rama" >
-          <option value="">Ej:Madrid </option>
-          <!-- recorremos con un ngFor nuestro array y mostramos el resultado  -->
-          <option value="provincia" *ngFor="let item of provincias.datos"> {{item.provincia}}</option>
-        </select>
+        <button id="rama2">Transferencia bancaria</button>
       </div>
       <div class="col-md-2"></div>
     </div>
       <div class="row" id="row2">
         <div class="col-md-1"></div>
         <div class="col-md-11">
-          <h5>¿Has sido alumn@ de magister?</h5>
-          <span class="conditions">Consulta condiciones --></span>
+          <h5>¿Vienes recomendado por alguien?</h5>
         </div>
         <div class="col-md-1"></div>
       </div>
@@ -47,23 +36,22 @@
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-7">
-          <button class="btn">Despues de 2017</button>
         </div>
       </div>
       <div class="row" id="row2">
         <div class="col-md-1"></div>
-        <div class="col-md-10">
-          <h5>Entrega de material</h5>
-          <span class="conditions">Consulta condiciones --></span>
+        <div class="col-md-11">
+          <h5 class="conditions">Detalles sobre forma de pago y proceso postpago --></h5>
         </div>
         <div class="col-md-1"></div>
       </div>
-      <div class="row">
+
+      <div class="row" id="row2">
         <div class="col-md-1"></div>
-        <div class="col-md-7">
-          <button class="btn1">Material mes a mes</button>
+        <div class="col-md-10">
+          <h5 class="conditions">Ver información legal --></h5>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-1"></div>
       </div>
       <div class="row">
         <div class="col-md-4"></div>
@@ -72,7 +60,9 @@
         </div>
         <div class="col-md-4"></div>
       </div>
+      <div class="btndiv2">
+        <a [routerLink]="['/formulario4']">Volver atras</a>
+      </div>
     </div>
 
   </div>
-

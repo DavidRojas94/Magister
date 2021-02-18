@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+* {
+  font-family: "Balsamiq Sans", cursive;
+}
+.container-right {
+  background-color: rgb(255, 254, 252);
+  position: relative;
+  margin-left: 485px;
+  margin-top: -930px;
+  height: 930px;
+}
+h1 {
+  margin-top: 95px;
+  color: rgb(87, 114, 148);
+  text-align: center;
+}
+#row1 {
+  margin-top: 75px;
+}
+span {
+  color: rgb(87, 114, 148);
+}
+h5 {
+  color: rgb(87, 114, 148);
+}
+#row2 {
+  margin-top: 100px;
+}
+#rama {
+  border-radius: 10px;
+  width: 200%;
+  height: 50%;
+  margin-top: 5%;
+  border: 2px solid;
+  border-color: rgb(171, 184, 201);
+}
+#row4 {
+  margin-top: 74px;
+}
+#row5 {
+  margin-top: 13px;
+}
+.input2 {
+  height: 150%;
+  width: 72%;
+  border: 1px solid rgb(87, 114, 148);
+  border-radius: 10px;
+}
+.firstcheck {
+  display: flex;
+  flex-direction: row;
+  margin-left: 9%;
+  margin-top: 74px;
+}
+
+.firstcheck h5{
+  margin-left: 17px;
+}
+.firstcheck label{
+  color:rgb(13, 198, 254);
+}
+.secondcheck{
+  display: flex;
+  flex-direction: row;
+  margin-left: 70%;
+  margin-top: -49px;
+}
+.secondcheck h5{
+  margin-left: 17px;
+}
+.secondcheck label{
+  color:rgb(13, 198, 254);
+}
+.btn2{
+  background-color: rgb(13, 198, 254);
+  color: white;
+  margin-top: 2%;
+  width: 45%;
+  height: 60%;
+  border-style: none;
+  border-radius: 10px;
+  margin-top: 10%;
+  box-shadow: 1px 2px 10px #072a4e;
+}
+#btndiv{
+  margin-left: 6%;
+}
+.btndiv2{
+  margin-top: 3%;
+  margin-left: 44%;
+}
+a {
+  color: rgb(13, 198, 254);
+  text-decoration: none;
+}
+

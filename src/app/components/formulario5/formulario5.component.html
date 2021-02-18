@@ -1,0 +1,80 @@
+<app-magisterbar [etapa]="5"></app-magisterbar>
+<div class="container-right">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><h1>Tu dirección</h1></div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="row" id="row1">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <h5>Comunidad de examen</h5>
+        <span>(Selecciona una opción)</span>
+        <select id="rama">
+          <option value="">Ej: Madrid</option>
+          <option value="rama" *ngFor="let item of provincias.datos">
+            {{ item.provincia }}
+          </option>
+        </select>
+      </div>
+      <div class="col-md-7"></div>
+    </div>
+    <div class="row" id="row2">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <h5>Dirección</h5>
+        <input
+          type="text"
+          id="rama"
+          placeholder="Ej: Calle Ramido de Matxu, 10, 4D"
+        />
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-3"></div>
+      <div class="col-md-2"></div>
+    </div>
+    <div class="row" id="row4">
+      <div class="col-md-1"></div>
+      <div class="col-md-3"><h5>Localidad</h5></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-3"><h5>Provincia</h5></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-3"><h5>Código postal</h5></div>
+    </div>
+    <div class="row" id="row5">
+      <div class="col-md-1"></div>
+      <div class="col-md-3">
+        <input type="text" class="input2" placeholder="Ej: Madrid" />
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-3">
+        <input type="text" class="input2" placeholder="Ej: Madrid" />
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-3">
+        <input type="text" class="input2" placeholder="Ej: 28040" />
+      </div>
+    </div>
+    <div class="firstcheck">
+      <input class="custom" name="" value="" type="checkbox"/>
+      <h5>Acepto la <label>información legal</label></h5>
+    </div>
+    <div class="secondcheck">
+      <input class="custom" name="" value="" type="checkbox"/>
+      <h5>Acepto la <label>protección de datos</label></h5>
+    </div>
+    <div class="row" id="row6">
+      <div class="col-md-4"></div>
+      <div class="col-md-4" id="btndiv">
+        <button class="btn2" type="submit" (click)="avanzar()">
+          Siguiente
+        </button>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  <div class="btndiv2">
+    <a [routerLink]="['/formulario4']">Volver atras</a>
+  </div>
+  </div>
+</div>

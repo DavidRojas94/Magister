@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+* {
+  font-family: "Balsamiq Sans", cursive;
+}
+.container-right {
+  background-color: rgb(255, 254, 252);
+  position: relative;
+  margin-left: 485px;
+  margin-top: -930px;
+  height: 930px;
+}
+h1 {
+  margin-top: 190px;
+  margin-left: 267px;
+  color: rgb(87,114,148);
+}
+h5{
+  color: rgb(87,114,148);
+}
+input{
+  height: 50px;
+  border-radius: 10px;
+  border-color: rgb(171,184,201);
+}
+.top{
+  margin-top: 200px;
+  margin-left: 114px;
+}
+
+.down{
+  margin-top: 140px;
+  margin-left: 26px;
+}
+.down1{
+  margin-left: 443px;
+  margin-top: -63px;
+}
+.down2{
+  margin-left: 860px;
+  margin-top: -103px;
+}
+.inp2{
+  width: 200px;
+}
+.btn-send{
+  background-color: rgb(13, 198, 254);
+  color: white;
+  width: 175px;
+  height: 77%;
+  border-style: none;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-left: 485px;
+  box-shadow: 1px 2px 10px #072a4e;
+}
+.btn-cont{
+  background-color: rgb(13, 198, 254);
+  color: white;
+  width: 175px;
+  height: 77%;
+  border-style: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 485px;
+  box-shadow: 1px 2px 10px #072a4e;
+}
+.btndiv2{
+  margin-top: 40px;
+  margin-left: 35%;
+}
+a {
+  color: rgb(13, 198, 254);
+  text-decoration: none;
+  background-color: transparent;
+  margin-left: 13%;
+}
+
+

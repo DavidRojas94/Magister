@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataDbService } from '../../services/data-db.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -9,7 +9,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
-  items: Observable<any[]>;
 
   createFormGroup(){
     return new FormGroup({
@@ -20,9 +19,9 @@ export class FormularioComponent implements OnInit {
     })
   }
   contactForm : FormGroup;
-
-  constructor(private dbData: DataDbService) {
+  constructor(private dbData: DataDbService, private router: Router) {
     this.contactForm = this.createFormGroup();
+
   }
 
   ngOnInit(): void {
@@ -35,9 +34,9 @@ export class FormularioComponent implements OnInit {
     }
 
   }
-  mostrarInformacion(){
-    this.dbData.mostrarInfo;
-    console.log("mostrando",this.contactForm.value);
+  avanzar(){
+    this.router.navigate(['formulario5']);
   }
+
 
 }

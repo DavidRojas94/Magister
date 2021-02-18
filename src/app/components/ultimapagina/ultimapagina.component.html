@@ -22,13 +22,11 @@
   </div>
   <div class="row">
     <div class="col-md-1"></div>
-    <div class="col-md-9"><button type="button" class="boton">Comenzar</button></div>
-    <div class="col-md-1"></div>
-  </div>
-  <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-9"><h5 [routerLink]="['firstpage']">Volver atrás</h5></div>
+    <div class="col-md-9"><button type="button" class="boton" (click)="home()">Home</button></div>
     <div class="col-md-1"></div>
   </div>
 
+  <div class="btndiv2">
+    <a [routerLink]="['/formulario6']">Volver atras</a>
+  </div>
   </div>

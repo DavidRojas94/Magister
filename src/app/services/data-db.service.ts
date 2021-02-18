@@ -3,10 +3,7 @@ import {
   AngularFirestore,
   AngularFirestoreCollection,
 } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
 import { Information } from '../models/information.interface';
-import { map } from 'rxjs/operators';
-type CollectionPredicate<T> = string | AngularFirestoreCollection;
 
 @Injectable({
   providedIn: 'root',
@@ -15,15 +12,14 @@ export class DataDbService {
   private contactCollection: AngularFirestoreCollection<Information>;
 
   constructor(private afs: AngularFirestore) {
-    this.contactCollection = afs.collection<Information>('datosPersonales');
-  }
-  col<T>(ref: CollectionPredicate<T>, queryFn?): AngularFirestoreCollection {
-    return typeof ref === 'string' ? this.afs.collection(ref, queryFn) : ref;
+    this.contactCollection = afs.collection<Information>('matricula');
   }
 
+  // Con esta funcion conseguimos añadir un nuevo registro a la coleccion datosPersonales
   saveInformation(newContact: any): void {
     this.contactCollection.add(newContact);
   }
+  // Con todas estas funciones lo que hacemos es conectarnos a las distintas colecciones para poder mostrar su contenido
   getInfo() {
     return this.afs.collection('datosPersonales').snapshotChanges();
   }
@@ -41,20 +37,5 @@ export class DataDbService {
   }
   getInfo5() {
     return this.afs.collection('tarifas').snapshotChanges();
-  }
-
-
-  mostrarInfo<T>(ref: CollectionPredicate<T>, queryFn?): Observable<any[]> {
-    return this.col(ref, queryFn)
-      .snapshotChanges()
-      .pipe(
-        map((docs) => {
-          return docs.map((d) => {
-            const data = d.payload.doc.data();
-            const id = d.payload.doc.id;
-            return { id, ...data };
-          });
-        })
-      );
   }
 }

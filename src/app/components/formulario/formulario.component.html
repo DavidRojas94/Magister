@@ -1,11 +1,103 @@
-<p>formulario works!!!!</p>
-<div class="form-container">
-  <h1>Contact us</h1>
-  <form [formGroup] ="contactForm" (ngSubmit)="onSaveForm()" (ngSubmit)="mostrarInformacion()">
-    <input type="text" formControlName="name" placeholder="Ej: David Rojas Caballero">
-    <input type="text" formControlName="dni" placeholder="Ej: Y56748659P">
-    <input type="text" formControlName="movil" placeholder="Ej: 654789735">
-    <input type="email" formControlName="email" placeholder="Ej: magis@gmail.com">
-    <button type="submit" class="btn-send" [disabled]=!contactForm.valid>Continuar</button>
-  </form>
+<app-magisterbar [etapa]="4"></app-magisterbar>
+<div class="container-right">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8"><h1>Tus datos personales</h1></div>
+      <div class="col-md-2"></div>
+    </div>
+    <form [formGroup]="contactForm" (ngSubmit)="onSaveForm()">
+      <div class="row">
+        <div class="top">
+          <div class="col-md-1"></div>
+          <div class="col-md-10"><h5>Nombre completo</h5></div>
+          <div class="col-md-1"></div>
+
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <input
+                type="text"
+                formControlName="name"
+                placeholder="Ej: David Rojas Caballero"
+              />
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="down">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-5"><h5>DNI-NIE</h5></div>
+          <div class="col-md-7"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <input
+              class="inp2"
+              type="text"
+              formControlName="dni"
+              placeholder="Ej: Y56748659P"
+            />
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+
+        <div class="down1">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-5"><h5>Movil</h5></div>
+            <div class="col-md-7"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <input
+                class="inp2"
+                type="text"
+                formControlName="movil"
+                placeholder="Ej: 654789735"
+              />
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+        </div>
+
+        <div class="down2">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-5"><h5>Email</h5></div>
+            <div class="col-md-7"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <input
+                class="inp2"
+                type="email"
+                formControlName="email"
+                placeholder="Ej: magis@gmail.com"
+              />
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+        </div>
+      </div>
+          <!-- He creado dos botones aunque en el modelo no apareciese.
+          Uno para enviar los datos a la coleccion que esta desabilitado
+          hasta que se completen todos los campos y el boton para avanzar
+          a la siguiente página. No he sabido juntar ambas funcionalidad en un boton
+          dado que al poner el click en el boton de enviar no se envian los datos -->
+      <button type="submit" class="btn-send" [disabled]="!contactForm.valid">
+        Enviar
+      </button>
+    </form>
+    <button class="btn-cont" (click)="avanzar()">Continuar</button>
+    <div class="btndiv2">
+      <a [routerLink]="['/formulario3']">Volver atras</a>
+    </div>
+  </div>
 </div>
