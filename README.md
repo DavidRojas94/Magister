@@ -7,7 +7,7 @@ Una vez instalado descargamos el proyecto y desde la consola nos posicionamos en
 ## Development server
 
 Desde la consola posicionate en la carpeta donde está el proyecto y escribe `ng serve` para hacer que el proyecto funcione en un navegador. Navega hacia `http://localhost:4200/`. La app se modificara automaticamente si modificamos algun documento.
-Para ver el firestore añadí como usuario colaborador al email `gabriel@magister.com` para que pueda ver las colecciones.
+Para ver el firestore añadí como usuario colaborador al email `magister.devs@gmail.com` para que pueda ver las colecciones.
 
 ## Code scaffolding
 
